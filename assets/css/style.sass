@@ -1,0 +1,945 @@
+$brown: #8d5c48
+$whitesmoke: #f6f3ef
+$selected: #EEEEFF
+$blue: #004aad
+$red: #CC2936
+$green: #1cc88a
+$darkgray: #272727
+$lightgray: #858796
+$global_boxshadow:   rgba(0, 0, 0, 0.2) 0px 1px 2px 0px
+$grey: #ebeeee
+$gray: #212932
+
+.red
+    background: $red !important 
+.blue
+    background: $blue !important
+.margin-10
+    margin: 0 10px
+.flex-end
+    display: flex
+    justify-content: space-between
+    align-items: center
+.flex-content,.center-container
+    display: flex
+    justify-content: center
+    align-content: center
+    width: 100%
+    &.end
+        justify-content: flex-end 
+    &.between
+        justify-content: space-between
+    input
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    width: 100%
+    background: $whitesmoke
+
+.main-content
+    width: 100%
+    min-height: 100vh
+    background-size: cover
+    background-repeat: no-repeat
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    .background
+        width: 100%
+        height: 100vh
+        position: fixed
+        top: 0
+        left: 0
+        z-index: 0
+        background: rgba(0, 0, 0, 0.3) url('../media/images/background.jpg')
+        height: 100%
+        background-position: center
+        background-repeat: no-repeat
+        background-size: cover
+        background-blend-mode: darken
+    .main-container
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        padding: 20px
+        background: rgba(255, 255, 255, 0.70 )
+        box-shadow: $global_boxshadow
+        min-width: 700px
+        height: 500px
+        z-index: 1
+        border-radius: 15px
+        .titles-content
+            margin: 10px
+            display: block 
+            .headline
+                padding: 10px
+                .title 
+                    text-align: center
+                    h1
+                        font-size: 150px
+                        color: $blue
+                        font-weight: 600
+                    p
+                        font-size: 40px
+                        font-weight: 500
+            .info-containers
+                .info-container
+                    margin: 10px
+                    padding: 10px
+                    display: flex
+                    align-items: center
+                    .icon
+                        min-width: 30px
+                        min-width: 30px
+                        width: 30px
+                        height: 30px
+                        border-radius: 50%
+                        // background: $darkgray
+                        border: 1px solid $darkgray
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        svg,path
+                            width: 20px
+                            height: auto
+                            fill: $darkgray
+                    .text
+                        width: 100%
+                        padding: 0 20px
+                        p
+                            font-size: 15px
+                            color: $darkgray
+
+        .buttons-content
+            display: flex
+            justify-content: center
+            .buttons-container
+                width: 100%
+                display: flex
+
+                .text-button
+                    padding: 10px 20px
+                    margin: 10px
+                    text-align: center
+                    border-radius: 4px
+                    cursor: pointer
+                    user-select: none
+                    text-decoration: none
+                    display: block
+                    border-radius: 25px
+                    transition: 0.2s all
+                    display: flex
+                    justify-content: center
+                    align-items: center
+
+                    span
+                        color: $darkgray
+                        font-size: 20px
+                        font-weight: 700
+                   
+                    &:hover:not(.active)
+                        margin-top: -2px
+                    &.active
+                        background: $blue
+                        span
+                            color: #fff
+
+.main-navbar
+    top: 0
+    left: 0
+    width: 100%
+    height: 100px
+    box-shadow: $global_boxshadow
+    .nav-content
+        display: flex
+        justify-content: space-between
+        padding: 10px 5%
+        height: 100%
+        .nav-left   
+            height: 100%
+            align-items: center
+            display: flex
+            align-items: center
+            .company-brand
+                margin: 0 25px
+                padding: 10px
+                h1
+                    font-size: 45px
+            .main-button-container
+                @extend .flex-content
+                .main-button
+                    padding: 10px 20px
+                    margin: 10px
+                    border-radius: 50px
+                    display: block
+                    height: 40px
+                    margin-top: 20px
+                    cursor: pointer
+                    text-decoration: none
+                    @extend .flex-content
+                    p
+                        font-weight: 600
+                        color: $darkgray
+                    &:hover
+                        background: #ebeeee
+        .nav-right
+            display: flex
+            justify-content: center
+            align-items: center
+            .nav-buttons
+                @extend .flex-content
+                display: flex
+                .nav-button-container
+                    margin: 10px
+                    cursor: pointer
+                    a
+                        padding: 10px 20px
+                        text-decoration: none
+                        border-radius: 100px    
+                        text-decoration: none
+                        text-decoration: none
+                        background: #ccc    
+                        box-shadow: $global_boxshadow
+                        white-space: nowrap
+ 
+                        &.active
+                            color: #ccc
+                            background: $blue
+                    span
+                        font-weight: 600
+                        font-size: 20px
+                        color: #fff
+                        text-decoration: none
+.main-body
+    .margined-content
+        margin: 10px 8%
+        .flex-two-row-container
+            display: flex
+            // flex-direction: column
+            // align-items: center
+            // padding-top: 5%
+            .row
+                height: 100%
+                min-height: 200px
+                background: #fff
+                border-radius: 4px
+                box-shadow: $global_boxshadow
+                margin: 5px
+                &.half
+                    width: 50%
+                &.row-left
+                    width: 80%
+                &.row-right
+                    .row-table
+                        width: 500px
+                        .row-header
+                            padding: 10px
+                        .row-body
+                            padding: 10px
+                            width: 100%
+                            // height: 300px
+                            overflow-y: auto
+                        .row-footer
+                            padding: 10px
+                            .flex-sub
+                                display: flex
+                                justify-content: space-between
+                                width: 100%
+                                align-items: center
+                                .sub-left
+                                    p
+                                        font-weight: 600
+                                        font-size: 24px
+                                .sub-right
+                                    .res-circle
+                                        padding: 10px 20px
+                                        border-radius: 10px
+                                        background: $blue
+                                        span
+                                            color: #fff
+                                            font-size: 24px
+.switch-tab-content-container
+    .tab-header-container
+        display: flex
+        align-items: center
+        background: $whitesmoke
+        .tab-text, .tab-button
+            padding: 10px 10px
+            p
+                font-size: 18px
+                color: $darkgray
+                font-weight: 600
+        .tab-text 
+            width: 240px
+            p
+                font-weight: 700
+        .tab-buttons
+            display: flex
+            .tab-button
+                cursor: pointer
+                margin: 0 10px
+                border-top-left-radius: 8px
+                border-top-right-radius: 8px
+                background: $whitesmoke
+                box-shadow: -6px -19px 22px -28px #000000
+                user-select: none
+                p
+                    color: $blue
+                &.active
+                    background: #fff
+    .tab-body-container
+        height: 100%
+        background: #fff
+        .tab-body-content
+            display: none
+            width: 100%
+            height: 100%
+            display: none
+            // height: 300px
+            min-height: 300px
+            &.show
+                display: flex !important
+            .content-left
+                min-width: 250px
+                width: 250px
+                height: 100%
+                overflow-y: auto
+                // border-right: 1px solid #ccc
+                .item
+                    padding: 10px
+                    cursor: pointer
+                    &:hover
+                        background: #ebeeee
+                    &.active
+                        background: $blue
+                        span
+                            color: #fff
+            .content-right
+                width: 100%
+                height: 100%
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                .content-top
+                    width: 100%
+                    padding: 10px 5%
+                    padding-top: 5%
+                .content-bot
+                    padding: 20px
+                    width: 100%
+.program-content
+    width: 100%
+    min-height: 100vh
+    background: $whitesmoke
+
+.body-content
+    grid-area: main
+    display: flex
+    flex-direction: column
+    justify-self: stretch
+    width: 100% !important
+    .top-side
+        width: 100%
+        min-height: 150px
+        .buttons-container
+            height: 50px
+            margin-right: 50px
+            margin-top: 25px
+            .nav-buttons
+                display: flex
+                justify-content: flex-start
+                align-items: center
+                .nav-button
+                    padding: 12px
+                    margin: 0px
+                    cursor: pointer
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    user-select: none
+                    text-decoration: none
+                    color: #050505
+                    .icon
+                        margin-right: 5px
+                        width: 24px
+                        height: auto
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        svg,path
+                            width: 24px
+                            height: auto
+                    .text
+                        span
+                            font-size: 18px
+                            font-weight: 700
+
+        .info-container
+            padding: 20px 25px
+            padding-bottom: 10px
+            margin: 1% 5%
+            .flex-content
+                display: flex
+                align-items: center
+                justify-content: space-between
+                .button
+                    margin: 5px 10px
+                    min-width: 80px
+                    padding: 6px 12px
+                    cursor: pointer
+                    user-select: none
+            
+                    .text
+                        text-align: center
+                        span
+                            font-size: 15px
+                            color: #fff
+                            white-space: nowrap
+                .search-engine-parent
+                    margin: 0px 10px
+    .bot-side
+        .grid-table-container
+            margin: 0% 5%
+            padding: 20px 25px
+
+
+.search-engine-parent
+    display: flex
+    height: 40px
+    background: #fff
+    box-shadow: $global_boxshadow
+    border-radius: 25px
+    input
+        padding: 8px 12px
+        border: none
+        outline: none
+        font-size: 16px
+        height: 40px
+        border-radius: 25px
+
+    .search-engine-button
+        padding: 10px
+        width: 40px
+        margin-left: 10px
+        cursor: pointer
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-right: 10px
+        .icon
+            width: 24px
+            height: auto
+            display: flex
+            justify-content: center
+            align-items: center
+            svg,path
+                width: 24px
+                height: auto
+
+
+.small-circular-button
+    width: 30px
+    height: 30px
+    border-radius: 4px
+    background: #fff
+    cursor: pointer
+    box-shadow: $global_boxshadow
+    -webkit-user-drag: none
+    &:active
+        transform: scale(0.9)
+    .icon
+        user-select: none
+        width: 100%
+        height: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        svg,path
+            width: 18px
+            height: auto
+
+.custom-combo-box
+    position: relative
+    box-shadow: $global_boxshadow
+    border: 1px solid $grey
+    cursor: pointer
+    display: flex
+    align-items: center
+    color: $darkgray
+    max-height: 40px
+    border-bottom: 2px solid $blue
+    &.show
+        .floating-container
+            display: block
+    .content
+        display: flex
+        align-items: center
+        align-content: center
+        width: 100%
+        justify-content: space-between
+        input
+            padding: 5px 20px
+            width: 100%
+            height: 100%
+            font-size: 16px
+            font-weight: 500
+            outline: none
+            background: none
+            border: none
+            cursor: pointer
+            color: $darkgray
+        .icon
+            width: 40px
+            height: 40px
+            min-width: 40px
+            min-height: 40px
+            max-width: 40px
+            display: flex
+            justify-content: center
+            align-items: center
+            svg,path
+                width: 24px
+                height: auto
+    .floating-container
+        position: absolute
+        top: 101%
+        background: #fff
+        box-shadow: $global_boxshadow
+        width: 100%
+        display: none
+        min-height: 50px
+        max-height: 150px
+        overflow: auto
+        z-index: 8
+        .item
+            padding: 5px 10px
+            cursor: pointer
+            user-select: none
+            color: $darkgray
+            &.hide
+                display: none
+            &:hover
+                background: $grey
+
+.icon-title
+    display: flex
+    align-items: center
+    .icon
+        margin-right: 10px
+        display: flex
+        align-items: center
+        justify-content: center
+        svg,path
+            width: 40px
+            height: auto
+            color: $darkgray
+            fill: $darkgray
+    .title 
+        font-size: 30px
+        color: $darkgray
+        font-weight: 600
+.buttons
+    margin: 5px
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    &.center
+        justify-content: center
+
+.icon-button
+    padding: 8px 14px
+    display: flex
+    justify-content: center
+    align-items: center
+    background: $blue   
+    min-width: 150px
+    cursor: pointer
+    border-radius: 0px
+    text-decoration: none
+    box-shadow: $global_boxshadow
+    &.show
+        display: flex !important
+    &.hide
+        display: none
+    &.fix
+        min-width: 50px
+        width: 50px
+    &.extra-small
+        margin: 5px 10px !important
+        padding: 8px 10px !important
+        min-width: auto
+        .icon
+            width: 20px
+        .text
+            span
+                font-size: 15px
+                white-space: nowrap
+    &.normal
+        margin: 0 !important
+        min-width: auto 
+        padding: 5px 10px
+        .text
+            span
+                color: #fff
+                font-size: 16px
+
+    &.small
+        min-width: auto
+        padding: 10px
+    &.green
+        background: $green
+    &.red
+        background: $red
+    &.lightgray
+        background: $darkgray
+    &:active
+        transform: scale(0.9)
+    .icon
+        width: 24px
+        height: auto
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-right: 10px
+        svg,path
+            width: 100%
+            height: auto
+            fill: #fff
+            stroke: #fff
+    .text
+        display: flex
+        justify-content: center
+        align-items: center
+        span
+            color: #fff
+            font-size: 17px
+            font-weight: 600
+            text-transform: uppercase
+            user-select: none
+
+.custom-checkbox-parent
+    width: 40px
+    height: 40px
+    padding: 10px
+    border-radius: 50%
+    cursor: pointer
+    display: flex
+    justify-content: center
+    &:hover
+        .circle
+            background: #cccccc98
+    .circle
+        width: 40px
+        height: 40px
+        padding: 10px
+        border-radius: 50%
+        cursor: pointer
+        position: absolute
+        top: 10%
+        margin-left: -10px
+        z-index: -1
+    .checkbox-content
+        width: 100%
+.custom-checkbox 
+	position: relative 
+	cursor: pointer 
+	font-size: 20px 
+	-webkit-user-select: none 
+	-moz-user-select: none 
+	-ms-user-select: none 
+	user-select: none 
+    box-shadow: $global_boxshadow
+
+	input 
+		position: absolute 
+		opacity: 0 
+		cursor: pointer 
+		height: 0 
+		width: 0 
+		&:checked 
+			& ~ .checkmark 
+				background-color: $blue 
+				&:after 
+					display: block 
+	.checkmark 
+		&:after 
+			left: 6px 
+			top: 2px 
+			width: 5px 
+			height: 10px 
+			border: solid white 
+			border-width: 0 3px 3px 0 
+			-webkit-transform: rotate(45deg) 
+			-ms-transform: rotate(45deg) 
+			transform: rotate(45deg) 
+.checkmark 
+	position: absolute 
+	top: 0 
+	left: 0 
+	height: 20px 
+	width: 20px 
+	background-color: #eee 
+	&:after 
+		content: "" 
+		position: absolute 
+		display: none 
+
+.popup-containers
+    z-index: 100
+    .popup-container-parent
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        z-index: 100
+        .popup-background
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background: rgba(0, 0,0 , 0.80)
+            z-index: -1
+        .popup-content
+            display: flex
+            justify-content: center
+            align-items: center
+            .popup-long-container
+                min-width: 60vw
+                min-height: 300px
+                background: #fff
+                box-shadow: $global_boxshadow
+                position: relative
+                border-radius: 4px
+                .close-btn
+                    position: absolute
+                    top: -30px
+                    right: -30px
+                    width: 60px
+                    height: 60px
+                    border-radius: 50%
+                    box-shadow: $global_boxshadow
+                    cursor: pointer
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    background: #fff
+                    display: none
+                    .icon
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        svg,path
+                            width: 24px
+                            height: auto
+                    &:active
+                        transform: scale(0.9)
+                .popup-header
+                    padding: 10px
+                    text-align: center
+                    h1
+                        color: $gray
+            .info-container
+                margin: 10px
+                padding: 10px
+                .info-item
+                    margin: 5px
+                    padding: 5px 
+                    display: flex
+                    align-items: center
+                    .item-left
+                        margin-right: 20px
+                        width: 25%
+                        .text span
+                            font-weight: 600
+                            font-size: 18px
+                            white-space: nowrap
+                    .item-right
+                        width: 75%
+                        .box
+                            padding: 10px
+                            border-radius: 4px
+                            background: $blue
+                            .text span
+                                color: #fff
+            .popup-container
+                width: 400px
+                min-height: 100px
+                background: #fff
+                box-shadow: $global_boxshadow
+                border-radius: 4px
+                .popup-top
+                    padding: 10px 
+                    text-align: center
+                    h2
+                        color: $gray
+                .preview-image
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    padding: 10px
+                    &.hide
+                        display: none
+                    .preview
+                        width: 150px
+                        overflow: hidden
+                        img
+                            width: 100%
+                            height: auto              
+                .popup-center
+                    padding: 10px
+                    min-height: 150px
+                    max-height: 500px
+                    overflow-y: auto
+                    form
+                        padding: 10px
+                        input
+                            width: 100% !important
+                    .buttons
+                        width: 100%
+                        justify-content: center
+                        .icon-button
+                            margin: 5px 10px 
+                .popup-bot
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    .buttons
+                        width: 100%
+                        justify-content: center
+                        .icon-button
+                            margin: 5px 5px 
+                 
+.custom-grid-table 
+    overflow-y: auto
+    max-height: calc( 100vh - 250px )  
+    min-height: 300px
+    background: #fff
+    box-shadow: $global_boxshadow 
+.custom-grid-table 
+    width: 100%
+    thead
+        background: #fff !important
+.custom-grid-table thead th 
+    position: sticky
+    top: 0
+    z-index: 1
+    border-bottom: 2px solid $blue
+    background: #fff
+    box-shadow: $global_boxshadow
+    text-transform: uppercase
+    // white-space: nowrap
+    height: 50px !important
+
+table 
+    border-collapse: collapse
+    width: 100% !important
+    position: relative
+    background: #fff
+    z-index: 1
+    tr
+        cursor: pointer
+        user-select: none
+        &:hover
+            background: #dfdfdf 
+        // &:nth-child(even)
+        //     background: $whitesmoke 
+        &.selected
+            background: $selected !important
+    td
+        height: 45px
+    th, td 
+        padding: 5px
+        text-align: center
+.hide
+    display: none
+.mix-input
+    display: flex
+    align-items: center
+.block-input
+    align-items: center
+    p
+        font-size: 14px
+        margin-left: 15px
+        font-weight: 500
+        color: $gray
+
+.form-group
+    margin: 10px
+    .error-container
+        &.input-error
+            input.text,.custom-combo-box 
+                border-bottom: 2px solid $red !important
+          
+    input.text
+        padding: 10px 20px
+        font-size: 16px
+        width: 100% !important
+        // box-shadow: $global_boxshadow
+        font-weight: 600
+        outline: none
+        background: none
+        border: 1px solid #ebeeee 
+        border-bottom: 2px solid $blue
+    .mix
+        display: flex
+        align-items: center
+        .left
+            width: 100%
+            input
+                height: 100%
+        .right
+            width: 100%
+            height: 100%
+            display: flex
+            align-items: center
+            .custom-combo-box
+                height: 95% !important
+                margin: 0 !important
+.sales-form-container
+    width: 500px
+    .container-header
+        border-bottom: 1px solid #ccc
+        padding: 15px 15px
+    .container-body
+        padding: 10px
+
+.flex-content
+    display: flex
+    align-items: center
+    justify-content: space-between
+    .custom-combo-box
+        width: calc( 100% - 55px )
+    &.control
+        input.text
+            width: 200px !important
+
+.add-minus-button
+    display: flex
+    align-items: center
+    justify-content: center
+    
+    .txt
+        width: 50%
+        text-align: center
+        display: flex
+        justify-content: center
+        align-items: center
+        input
+            width: 100%
+            padding-left: 10px
+            background: none
+            text-align: center
+            border: none
+            text-align: center
